@@ -1,9 +1,18 @@
 //.env 환경변수 사용
 const dotenv = require('dotenv').config();
 
+//nodejs 와 mysql 접속
+const mysql = require('mysql');
+const conn = mysql.createConnection({
+  host: process.env.HOST,
+  user: process.env.USER,
+  password: process.env.PASS,
+  database: process.env.DATABASE
+});
+conn.connect();
+
 const express = require('express');
 const app = express();
-
 
 //post방식의 데이터 사용을 위한 body-parser 설정
 const bodyParser = require('body-parser');
@@ -20,6 +29,11 @@ app.listen(8080, function(){
 });
 
 app.get('/', function(req, res){
-  res.render('index.ejs');
+  let sql = "SELECT * FROM basics WHERE type=? AND title!=''";
+  let params = "apt_trade";
+  conn.query(sql, params, function(err, rows) {
+    if(err) throw err;
+    res.render('index.ejs', {data:rows});
+  })
 });
 

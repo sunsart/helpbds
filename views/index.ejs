@@ -24,10 +24,12 @@
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"/>
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-    <!-- Template Main CSS File -->
+    <!-- CSS File -->
     <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="css/dropdown.css" rel="stylesheet">
+    <link href="css/table.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/dropdown.css">
+    <!-- JS File -->
 	  <script src="js/dropdown.js"></script>
 
     <!-- =======================================================
@@ -147,10 +149,32 @@
 
       </div>
 
+      <!--특약 테이블-->
+      <div class="font">
+        <br>
+        <table id="table-clause" style="width:100%">
+          <% for(let i=0; i<data.length; i++) { %>
+            <tr style="height:40px">
+              <td style="width:12%">
+                <input type="checkbox" id="<%= data[i].id %>" data-id="<%= data[i].id %>">
+                <label for="<%= data[i].id %>"> <%= data[i].title %> </label> 
+              </td>
+              <td>
+                <label id="table-clause-content"> <%= data[i].content %></label> 
+              </td>
+            </tr>
+          <% } %>
+        </table><br>
+
+        <input type="button" id="copy-button" data-clipboard-target="#copy-content" value="복사하기">
+        <span class="font">(위 특약사항을 선택후, 복사하기 버튼을 클릭하고 계약서 작성 프로그램의 특약사항란에 붙여넣기(Ctrl+V) 하시면 됩니다)</span>
+        <br><br>
+      </div>
+
       <!-- ===== 특약정리 ===== -->
       <div>
 	      <form action="/Copy.php">
-		      <textarea class="font" id="copyContent" name="message" rows="20" style="width:100%;"></textarea>
+		      <textarea class="font" id="copy-content" name="message" rows="20" style="width:100%;"></textarea>
 	      </form>
       </div>
 
