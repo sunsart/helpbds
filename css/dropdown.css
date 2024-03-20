@@ -17,7 +17,7 @@
   display: inline-block;
 }
 
-/* 특약 세부 목록 */
+/* dropdown 세부 목록 */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -33,7 +33,6 @@
   padding: 8px 16px;
   text-decoration: none;
   display: block;
-  
 }
 
 .dropdown a:hover {background-color: #ddd;}

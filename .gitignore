@@ -131,3 +131,4 @@ dist
 
 # add to gitnore
 assets/
+node_modules/

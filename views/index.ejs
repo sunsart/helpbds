@@ -66,6 +66,7 @@
 
     <!-- ======= main ======= -->
     <main id="main">
+
       <!-- ===== 드롭다운바(계약종류) ===== -->
       <div class="navibar font">
         <div class="dropdown">
@@ -146,42 +147,13 @@
 
       </div>
 
-      <!-- ===== 특약테이블 ===== -->
-      <div id="table" class="font">
-	      <br>
-	      <span class="font" id="content_name"> <%= type %> </span>
-	      <% if (user) { %>
-		      <button id="edit_button" class="edit_btn" style="visibility:visible;">수정</button>
-	      <% } else { %>
-		      <button id="edit_button" class="edit_btn" style="visibility:hidden;">수정</button>
-	      <% } %>
-
-	      <table id="table_content" style="width:100%">
-		      <% for(let i=0; i<data.length; i++){ %>
-			      <tr style="height:40px">
-				      <td id="col_size" style="width:12%">
-					      <input type="checkbox" class="checkbox" data-id="<%= data[i].id %>">
-					      <label class="title"> <%= data[i].title %></label> 
-					      <button id="clause_button" class="clause_btn" data-id="<%= data[i].id %>" onclick="clickEdit(this)">선택</button>
-				      </td>
-				      <td>
-					      <label class="content"> <%= data[i].content %></label> 
-				      </td>
-			      </tr>
-		      <% } %>
-	      </table><br>
-
-	      <input type="button" id="copyButton" data-clipboard-target="#copyContent" value="복사하기">
-	      <span class="font">(위 특약사항을 선택후, 복사하기 버튼을 클릭하고 계약서 작성 프로그램의 특약사항란에 붙여넣기(Ctrl+V) 하시면 됩니다)</span>
-	      <br><br>
-      </div>
-
       <!-- ===== 특약정리 ===== -->
       <div>
 	      <form action="/Copy.php">
 		      <textarea class="font" id="copyContent" name="message" rows="20" style="width:100%;"></textarea>
 	      </form>
       </div>
+
     </main>
 
     <!-- ======= Footer ======= -->
