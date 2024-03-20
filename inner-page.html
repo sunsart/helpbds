@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <title>Inner Page - 부동산 도우미</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet"/>
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"/>
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"/>
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/dropdown.css">
+	  <script src="js/dropdown.js"></script>
+
+    <!-- =======================================================
+  * Template Name: Ninestars
+  * Updated: Jan 29 2024 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  </head>
+
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center">
+      <div class="container d-flex align-items-center justify-content-between">
+        <div class="logo">
+          <h1 class="text-light">
+            <a href="index.html"><span>Ninestars</span></a>
+          </h1>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        </div>
+
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link scrollto" href="#hero">Home</a></li>
+            <li><a class="nav-link scrollto" href="#about">특약사항</a></li>
+            <li>
+              <a class="nav-link scrollto" href="#services">부동산뉴스</a>
+            </li>
+            <li><a class="nav-link scrollto" href="#portfolio">매물정보</a></li>
+            <li><a class="nav-link scrollto" href="#team">구인구직</a></li>
+            <li><a class="nav-link scrollto" href="#contact">현수막</a></li>
+            <li><a class="getstarted scrollto" href="#about">로그인</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+        <!-- .navbar -->
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <main id="main">
+
+      <!-- ===== 드롭다운바(계약종류) ===== -->
+      <div class="navibar font">
+        <div class="dropdown">
+          <button id="apt" class="dropbtn" onclick="clickMenuBtn(this.id)">아파트</button>
+          <div id="apt-Dropdown" class="dropdown-content">
+            <a href="/type/apt_trade" class="menu">매매</a>
+            <a href="/type/apt_jeonse" class="menu">전세</a>
+            <a href="/type/apt_monthly" class="menu">월세</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button id="officetel" class="dropbtn" onclick="clickMenuBtn(this.id)">오피스텔
+          </button>
+          <div id="officetel-Dropdown" class="dropdown-content">
+            <a href="/type/officetel_trade" class="menu">매매</a>
+            <a href="/type/officetel_jeonse" class="menu">전세</a>
+            <a href="/type/officetel_monthly" class="menu">월세</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button id="dasedae" class="dropbtn" onclick="clickMenuBtn(this.id)">다세대주택</button>
+          <div id="dasedae-Dropdown" class="dropdown-content">
+            <a href="/type/dasedae_trade" class="menu">매매</a>
+            <a href="/type/dasedae_jeonse" class="menu">전세</a>
+            <a href="/type/dasedae_monthly" class="menu">월세</a>
+          </div>
+        </div>
+      
+        <div class="dropdown">
+          <button id="dagagu" class="dropbtn" onclick="clickMenuBtn(this.id)">다가구주택</button>
+          <div id="dagagu-Dropdown" class="dropdown-content">
+            <a href="/type/dagagu_trade" class="menu">매매</a>
+            <a href="/type/dagagu_jeonse" class="menu">전세</a>
+            <a href="/type/dagagu_monthly" class="menu">월세</a>
+          </div>
+        </div>
+      
+        <div class="dropdown">
+          <button id="oneroom" class="dropbtn" onclick="clickMenuBtn(this.id)">원룸</button>
+          <div id="oneroom-Dropdown" class="dropdown-content">
+            <a href="/type/oneroom_jeonse" class="menu">전세</a>
+            <a href="/type/oneroom_monthly" class="menu">월세</a>
+          </div>
+        </div>
+      
+        <div class="dropdown">
+          <button id="shop" class="dropbtn" onclick="clickMenuBtn(this.id)" style="color:yellowgreen;">상가</button>
+          <div id="shop-Dropdown" class="dropdown-content">
+            <a href="/type/shop_trade" class="menu">매매</a>
+            <a href="/type/shop_monthly" class="menu">월세</a>
+          </div>
+        </div>
+      
+        <div class="dropdown">
+          <button id="factory" class="dropbtn" onclick="clickMenuBtn(this.id)" style="color:yellowgreen;">공장/창고</button>
+          <div id="factory-Dropdown" class="dropdown-content">
+            <a href="/type/factory_trade">매매</a>
+            <a href="/type/factory_monthly">월세</a>
+          </div>
+        </div>
+      
+        <div class="dropdown">
+          <button id="land" class="dropbtn" onclick="clickMenuBtn(this.id)" style="color:yellowgreen;">토지</button>
+          <div id="land-Dropdown" class="dropdown-content">
+            <a href="/type/land_trade">매매</a>
+            <a href="/type/land_monthly">월세</a>
+          </div>
+        </div>
+      
+        <div class="dropdown">
+          <button id="etc" class="dropbtn" onclick="clickMenuBtn(this.id)" style="color:yellow;">기타</button>
+          <div id="etc-Dropdown" class="dropdown-content">
+            <a href="/type/etc">기타</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ===== 특약테이블 ===== -->
+      <div id="table" class="font">
+	    <br>
+	    <span class="font" id="content_name"> <%= type %> </span>
+	    <% if (user) { %>
+		    <button id="edit_button" class="edit_btn" style="visibility:visible;">수정</button>
+	    <% } else { %>
+		    <button id="edit_button" class="edit_btn" style="visibility:hidden;">수정</button>
+	    <% } %>
+
+	    <table id="table_content" style="width:100%">
+		    <% for(let i=0; i<data.length; i++){ %>
+			    <tr style="height:40px">
+				    <td id="col_size" style="width:12%">
+					    <input type="checkbox" class="checkbox" data-id="<%= data[i].id %>">
+					    <label class="title"> <%= data[i].title %></label> 
+					    <button id="clause_button" class="clause_btn" data-id="<%= data[i].id %>" onclick="clickEdit(this)">선택</button>
+				    </td>
+				    <td>
+					    <label class="content"> <%= data[i].content %></label> 
+				    </td>
+			    </tr>
+		    <% } %>
+	    </table><br>
+
+	    <input type="button" id="copyButton" data-clipboard-target="#copyContent" value="복사하기">
+	    <span class="font">(위 특약사항을 선택후, 복사하기 버튼을 클릭하고 계약서 작성 프로그램의 특약사항란에 붙여넣기(Ctrl+V) 하시면 됩니다)</span>
+	    <br><br>
+    </div>
+
+    <!-- ===== 특약정리 ===== -->
+    <div>
+	    <form action="/Copy.php">
+		    <textarea class="font" id="copyContent" name="message" rows="20" cols="200"></textarea>
+	    </form>
+    </div>
+
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="container py-4">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Ninestars</span></strong
+          >. All Rights Reserved
+        </div>
+        <div class="credits">
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
