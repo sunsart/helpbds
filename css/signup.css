@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box
+}
+
+.signup-box {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+
+  /* background-color: gray; */
+  /* height: 100vh; */
+}
+
+.signup-container {
+  padding: 16px;
+  width: 400px;
+  border: 1px solid;
+  border-color: darkgray;
+  border-radius: 1%;
+}
+
+h1 {
+  text-align: center;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #dcdbdb;
+  margin-bottom: 25px;
+}
+
+.terms {
+  width: 100%;
+  border: 1px solid #818181;
+}
+
+.signup-btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  font-size: 16px;
+}
+
+.signup-btn:hover {
+  opacity:1;
+}
+
+/* 비밀번호찾기, 아이디찾기, 회원가입 */
+.signup-add {
+  text-align: center;
+  padding-top: 15px;
+}
+
+.signup-add a {
+  font-size: 14px;
+  margin: 0px 15px;
+  color: rgb(97, 97, 97);
+  text-decoration-line: none;
+}
+
+.signup-add a:hover {
+  color: rgb(0, 0, 0);
+}
