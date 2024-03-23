@@ -4,33 +4,32 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
     <title>Inner Page - 부동산 도우미</title>
     <meta content="" name="description" />
     <meta content="" name="keywords" />
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon" />
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link href="../assets/img/favicon.png" rel="icon" />
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet"/>
 
     <!-- Vendor CSS Files -->
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"/>
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"/>
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"/>
+    <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"/>
+    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
     <!-- CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet" />
-    <link href="css/dropdown.css" rel="stylesheet">
-    <link href="css/table.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet" />
+    <link href="../css/dropdown.css" rel="stylesheet">
+    <link href="../css/table.css" rel="stylesheet">
 
     <!-- JS File -->
-	  <script src="js/dropdown.js"></script>
+	  <script src="../js/dropdown.js"></script>
 
     <!-- =======================================================
   * Template Name: Ninestars
@@ -44,6 +43,7 @@
   <body>
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top d-flex align-items-center">
+
       <div class="container d-flex align-items-center justify-content-between">
         <div class="logo">
           <h1 class="text-light">
@@ -62,15 +62,15 @@
             <li><a class="login scrollto" href="../html/login.html">로그인</a></li>
           </ul>
         </nav>
-        <!-- .navbar -->
       </div>
+
     </header>
 
     <!-- ======= main ======= -->
     <main id="main">
 
       <!-- ===== 드롭다운바(계약종류) ===== -->
-      <div class="navibar font">
+      <div class="navibar">
         <div class="dropdown">
           <button id="apt" class="dropbtn" onclick="clickMenuBtn(this.id)">아파트</button>
           <div id="apt-Dropdown" class="dropdown-content">
@@ -149,7 +149,7 @@
 
       </div>
 
-      <!--특약 테이블-->
+      <!-- ===== 특약테이블 ===== -->
       <div class="font">
         <br>
         <table id="table-clause" style="width:100%">
@@ -162,8 +162,8 @@
               <td>
                 <label id="table-clause-content"> <%= data[i].content %></label> 
               </td>
-            </tr>
-          <% } %>
+            </tr> 
+          <% } %> 
         </table><br>
 
         <input type="button" id="copy-button" data-clipboard-target="#copy-content" value="복사하기">
@@ -191,7 +191,6 @@
         </div>
       </div>
     </footer>
-    <!-- End Footer -->
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

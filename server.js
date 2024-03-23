@@ -37,3 +37,14 @@ app.get('/', function(req, res){
   })
 });
 
+//시멘틱 url, 네비게이션바에서 메뉴 선택시 테이블 내용 변경
+app.get('/type/:id', function(req, res) {
+  let clauseType = req.params.id; //선택된 테이블값 전역변수에 저장
+  let sql = "SELECT * FROM basics WHERE type=? AND title!=''";
+  let params = [clauseType];
+  conn.query(sql, params, function(err, rows){
+    if(err) throw err;
+    res.render('index.ejs', {data:rows});
+  })
+})  
+

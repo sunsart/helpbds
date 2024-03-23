@@ -25,7 +25,7 @@ hr {
   margin-bottom: 25px;
 }
 
-#findpw-name, #findpw-email {
+input[type=text] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -34,7 +34,7 @@ hr {
   box-sizing: border-box;
 }
 
-#findpw-name:focus, #findid-email:focus {
+input[type=text]:focus {
   background-color: #ddd;
   outline: none;
 }
