@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+
     <title>Inner Page - 부동산 도우미</title>
     <meta content="" name="description" />
     <meta content="" name="keywords" />
@@ -30,6 +32,7 @@
 
     <!-- JS File -->
 	  <script src="../js/dropdown.js"></script>
+    <script src="../js/table.js"></script>
 
     <!-- =======================================================
   * Template Name: Ninestars
@@ -69,7 +72,7 @@
     <!-- ======= main ======= -->
     <main id="main">
 
-      <!-- ===== 드롭다운바(계약종류) ===== -->
+      <!-- ===== 드롭다운바 ===== -->
       <div class="navibar">
         <div class="dropdown">
           <button id="apt" class="dropbtn" onclick="clickMenuBtn(this.id)">아파트</button>
@@ -152,29 +155,29 @@
       <!-- ===== 특약테이블 ===== -->
       <div class="font">
         <br>
-        <table id="table-clause" style="width:100%">
+        <table class="table-clause">
           <% for(let i=0; i<data.length; i++) { %>
             <tr style="height:40px">
               <td style="width:12%">
-                <input type="checkbox" id="<%= data[i].id %>" data-id="<%= data[i].id %>">
+                <input type="checkbox" class="checkbox" id="<%= data[i].id %>" data-id="<%= data[i].id %>">
                 <label for="<%= data[i].id %>"> <%= data[i].title %> </label> 
               </td>
               <td>
-                <label id="table-clause-content"> <%= data[i].content %></label> 
+                <label class="table-clause-content"> <%= data[i].content %></label> 
               </td>
             </tr> 
           <% } %> 
         </table><br>
 
         <input type="button" id="copy-button" data-clipboard-target="#copy-content" value="복사하기">
-        <span class="font">(위 특약사항을 선택후, 복사하기 버튼을 클릭하고 계약서 작성 프로그램의 특약사항란에 붙여넣기(Ctrl+V) 하시면 됩니다)</span>
+        <span>(위 특약사항을 선택후, 복사하기 버튼을 클릭하고 계약서 작성 프로그램의 특약사항란에 붙여넣기(Ctrl+V) 하시면 됩니다)</span>
         <br><br>
       </div>
 
       <!-- ===== 특약정리 ===== -->
       <div>
 	      <form action="/Copy.php">
-		      <textarea class="font" id="copy-content" name="message" rows="20" style="width:100%;"></textarea>
+		      <textarea id="copy-content" name="message" rows="20"></textarea>
 	      </form>
       </div>
 
